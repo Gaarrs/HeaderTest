@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	let burgerIcon = document.querySelector('.burger-icon'),
 		burgerMenu = document.querySelector('.burger__popup'),
 		searchIcon = document.querySelector('.mobile__search'),
-		searchInput = document.querySelector('.search__mobile');
+		searchInput = document.querySelector('.search__mobile'),
+		menu = document.querySelector('.products-menu');
 
 	burgerIcon.onclick = function() {
 		if (burgerMenu.classList.contains('hidden')) {
@@ -13,6 +14,14 @@ document.addEventListener("DOMContentLoaded", function() {
 			burgerMenu.classList.remove('visible');
 			burgerMenu.classList.add('hidden');
 		}
+		if (menu.classList.contains('hidden')) {
+			menu.classList.remove('hidden');
+			menu.classList.add('visible');
+		} else if (menu.classList.contains('visible')){
+			menu.classList.remove('visible');
+			menu.classList.add('hidden');
+		}
+
 	};
 
 	searchIcon.onclick = function() {
